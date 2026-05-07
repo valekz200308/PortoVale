@@ -129,17 +129,24 @@
         /* --- Projects Section --- */
         #projects { padding: 80px 8%; background: #0b1120; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { 
-            background: var(--bg-card); 
-            padding: 25px; 
-            border-radius: 20px; 
-            border: 1px solid rgba(255,255,255,0.05); 
+        .card {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: var(--transition);
+            
+            /* TAMBAHKAN KODE DI BAWAH INI */
+            text-decoration: none;    /* Menghilangkan garis bawah link */
+            display: block;           /* Memastikan seluruh area box bisa diklik */
+            color: var(--text-main);  /* Memastikan warna teks tidak berubah jadi biru link */
         }
-        .card:hover { 
-            border-color: var(--neon-blue); 
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); 
-            transform: translateY(-10px); 
+
+        .card:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+            transform: translateY(-10px);
+            cursor: pointer;          /* Mengubah kursor menjadi tangan saat hover */
         }
 
         /* --- Contact & Footer --- */
@@ -201,13 +208,12 @@
     <section id="projects">
         <h2 style="text-align: center; margin-bottom: 40px;">Proyek Terbaru</h2>
         <div class="grid">
-            <div class="card">
-                <a href="https://moto-care-navy.vercel.app/" target="_blank" style="text-decoration: none;">
+            <!-- Proyek 1 -->
+            <a href="https://moto-care-navy.vercel.app/" class="card" target="_blank">
                 <h3>Aplikasi Perawatan Motor</h3>
                 <p>Sistem untuk mengelola dan memantau perawatan motor secara digital.</p>
                 <small style="color: var(--neon-blue)">Python • HTML • CSS</small>
-                </a>
-            </div>
+            </a>
         </div>
     </section>
 
