@@ -10,6 +10,7 @@
     
     <!-- Font Awesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 
     <style>
@@ -127,6 +128,19 @@
         .skill-item i { font-size: 2.5rem; color: var(--neon-blue); margin-bottom: 10px; }
         .skill-item:hover { transform: translateY(-10px); background: #25334a; }
 
+        /* Pastikan ini ada agar SVG tampil sama besar dengan ikon lainnya */
+        .skill-item svg {
+            width: 40px;
+            height: 40px;
+            fill: var(--neon-blue); /* Memberi warna neon biru */
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+
+        .skill-item:hover svg {
+            filter: drop-shadow(0 0 8px var(--neon-blue));
+        }
+
         /* --- Projects Section --- */
         #projects { padding: 80px 8%; background: #0b1120; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -203,8 +217,15 @@
             <div class="skill-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
             <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
             <div class="skill-item"><i class="fab fa-python"></i><p>Python</p></div>
-            <div class="skill-item"><i class="fab fa-js-square"></i><p>JavaScript</p></div>      
-            <div class="skill-item"><i class="fi fi-br-tools"></i><p>Mechanic</p></div>      
+            <div class="skill-item"><i class="fab fa-js-square"></i><p>JavaScript</p></div>
+            <div class="skill-item">
+                <!-- SVG Logo Flutter Langsung -->
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.314 0L2.3 12L6 15.7L21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/>
+                </svg>
+                <p>Flutter</p>
+            </div>
+            <div class="skill-item"><i class="fi fi-br-tools"></i><p>Mechanic</p></div>
         </div>
     </section>
 
