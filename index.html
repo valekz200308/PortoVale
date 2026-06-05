@@ -38,20 +38,44 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(12px);
-            position: sticky;
-            top: 0;
+            padding: 10px 25px;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85%;
+            max-width: 1100px;
+            border-radius: 100px;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--neon-blue); letter-spacing: 2px; }
+        .logo { font-size: 1.2rem; font-weight: 800; color: var(--text-main); letter-spacing: 1px; }
+        .logo span { color: var(--neon-blue); }
 
-        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav ul { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
         nav ul li a { text-decoration: none; color: var(--text-main); transition: var(--transition); }
         nav ul li a:hover { color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); }
+
+        .nav-btn {
+            background: var(--neon-blue);
+            color: var(--bg-dark) !important;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .nav-btn:hover {
+            box-shadow: 0 0 15px var(--neon-blue);
+            transform: translateY(-2px);
+        }
 
         /* --- Hero Section dengan Foto --- */
         .hero {
@@ -185,13 +209,13 @@
 <body>
 
     <nav>
-        <div class="logo">Valerian Kamil Zaeni</div>
+        <div class="logo">V<span>.KZ</span></div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Proyek</a></li>
-            <li><a href="#contact">Kontak</a></li>
         </ul>
+        <a href="#contact" class="nav-btn">Let's Talk</a>
     </nav>
 
     <!-- Hero Section dengan Foto -->
